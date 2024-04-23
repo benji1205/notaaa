@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+.logo{
+	font-weight: 700;
+}
+
+.error-background{
+	background: linear-gradient(-45deg, #941010, #cf0202, #ff5a5a, #db0000);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+	height: 80vh;
+}
+
+.default-background{
+	background: linear-gradient(-45deg, #ffd012, #ffaf45, #ffbb00, #ffe928);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+	height: 80vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
