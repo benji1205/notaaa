@@ -13,6 +13,7 @@
 <?php
 if (isset($_POST['SUBMIT'])) {
     $foundname= $_POST['findname'];
+    $user = $_SESSION['username'];
     $foundname = '%' . $foundname . '%';
 ?>
 
@@ -22,11 +23,10 @@ if (isset($_POST['SUBMIT'])) {
 <!--This row should be hidden-->	
 <?php
 $no=1;
-$data1=mysqli_query($conn,"SELECT * FROM note WHERE NoteTitle LIKE '%$foundname%' OR Tag1 LIKE '%$foundname%' OR Tag2 LIKE '%$foundname%'
-");		
+$data1=mysqli_query($conn,"SELECT * FROM note WHERE username = '$user' AND (NoteTitle LIKE '%$foundname%' OR Tag1 LIKE '%$foundname%' OR Tag2 LIKE '%$foundname%')");	
 while ($info1=mysqli_fetch_array($data1))
 {
-    $NoteID = $info1['NoteID'];
+            $NoteID = $info1['NoteID'];
             $NoteTitle = $info1['NoteTitle'];
             $NoteHeadFont = $info1['NoteHeadFont'];
             $NoteAccentColour = $info1['NoteAccentColour'];
